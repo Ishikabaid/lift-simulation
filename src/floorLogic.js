@@ -8,7 +8,7 @@ const FloorLogic = () => {
         setcurrentFloor(presentFloor);
     }
 
-    return ( 
+    return (
         <div className="floorsContainer">
             <h1>Lift Simulation</h1>
        
@@ -84,7 +84,9 @@ const FloorLogic = () => {
                     style={{ transform: `translateY(${-currentFloor * "140"}px)` }}
                 ></div>
             </div>
-
+            <div className="footer">
+            <footer>The contents of this website are deployed from this <a href="https://github.com/Ishikabaid/lift-simulation">repo</a>.</footer>
+            </div>
         </div>
     
     );

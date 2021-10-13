@@ -61,6 +61,19 @@ h3 {
   justify-content: space-between;
 }
 
+.footer {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  margin: auto;
+  margin-left: 25%;
+  width: 50%;
+}
+
+footer a {
+  text-decoration: none;
+  color: blue;
+}
+
 
 
 
