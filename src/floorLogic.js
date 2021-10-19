@@ -10,9 +10,21 @@ const FloorLogic = () => {
 
     return (
         <div className="floorsContainer">
-            <h1>Lift Simulation</h1>
-       
-            <div className="floor">
+            <nav className="navbar" >
+                <h1 className="heading">Lift Simulation</h1>
+                <div className="inputDiv">
+                    <div className="inputs">
+                        <label htmlFor="numfloors">Enter No. of Floors</label>
+                        <input type="number" id="numfloors" cols="1" rows="1" placeholder="Floors"/>
+                    </div>
+                    <div className="inputs">
+                        <label htmlFor="numlifts">Enter No. of Lifts</label>
+                        <input type="number" id="numlifts" cols="1" rows="1" placeholder="Lifts"/>
+                    </div>
+                </div>
+            </nav>
+            
+            <div className="floor" id="first">
                 <div>
                     <button
                         className="button b1"
