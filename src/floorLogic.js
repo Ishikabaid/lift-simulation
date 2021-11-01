@@ -1,7 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const FloorLogic = () => {
     const [currentFloor, setcurrentFloor] = useState('0');
+
+    const prevFloor = useRef();
+    useEffect(() => {
+        prevFloor.current = currentFloor;
+    });
+    const prevFloorCount = prevFloor.current;
+
+    const liftSpeed = {
+        transform: `translateY(-${currentFloor * 140}px)`,
+        transitionDuration: `${(currentFloor - prevFloorCount) * 2.0}s`,
+    };
 
     function switchFloor(e) {
         const presentFloor = e.target.id;
@@ -17,10 +28,10 @@ const FloorLogic = () => {
                         <label htmlFor="numfloors">Enter No. of Floors</label>
                         <input type="number" id="numfloors" cols="1" rows="1" placeholder="Floors"/>
                     </div>
-                    <div className="inputs">
+                    {/* <div className="inputs">
                         <label htmlFor="numlifts">Enter No. of Lifts</label>
                         <input type="number" id="numlifts" cols="1" rows="1" placeholder="Lifts"/>
-                    </div>
+                    </div> */}
                 </div>
             </nav>
             
@@ -93,7 +104,8 @@ const FloorLogic = () => {
             
                 <div
                     className="lift"
-                    style={{ transform: `translateY(${-currentFloor * "140"}px)` }}
+                    style = {liftSpeed}
+                    // style={{ transform: `translateY(${-currentFloor * "140"}px)` }}
                 ></div>
             </div>
             <div className="footer">

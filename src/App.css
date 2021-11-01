@@ -36,6 +36,7 @@
 
 .inputs {
   display: inline;
+  margin-right: 50px;
 }
 
 .inputDiv {
@@ -62,7 +63,7 @@ h3 {
   left: 50%;
   border: 2px solid black;
   background-color: grey;
-  transition-duration: 1s;
+  transition-duration: linear;
 }
 
 button {
@@ -115,13 +116,13 @@ footer a {
 
 @media screen and (max-width: 480px) {
   #first {
-    margin-top: 100px;
+    margin-top: 80px;
   }
   .floorsContainer {
      margin-top: 20px;
   }
   .inputDiv {
-    margin-top: 70px;
+    margin-top: 60px;
     display: flex;
     position: absolute;
   }
